@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DreamMusic.Models.ApplicationUser" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DreamMusic.Models.Comprar">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAgDCAAAACAAAAIAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\Comprar.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cliente" />
+      <Property Name="MetodoDePago" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ComprarItem" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Genero">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAgAAAgAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\Genero.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Discos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Disco">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <AssociationLine Name="Genero" Type="DreamMusic.Models.Genero" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.091" />
+        <Point X="2.502" Y="2.091" />
+        <Point X="2.502" Y="2.009" />
+        <Point X="2" Y="2.009" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0" Y="0.115" Height="0.182" Width="0.754" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAgAgAAIIAAAAAAAAAAAQAIAEAABA=</HashCode>
+      <FileName>Casos de uso\CU-ComprarDiscos\Disco.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Genero" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ItemCompra" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Genero">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="Discos" Type="DreamMusic.Models.Disco" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="2.683" />
+        <Point X="2.375" Y="2.683" />
+        <Point X="2.375" Y="2.764" />
+        <Point X="2.75" Y="2.764" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAgAAAgAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\CU-ComprarDiscos\Genero.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Discos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.ItemDeCompra">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <AssociationLine Name="Comprar" Type="DreamMusic.Models.Comprar">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.085" Y="0.06" Height="0.182" Width="0.76" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAgAgAAIAAAAAAAAAAEIAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\ItemDeCompra.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Disco" />
+      <Property Name="Comprar" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Cliente">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\Cliente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Compras" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.PayPal" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAABAEAAEAAAA=</HashCode>
+      <FileName>Casos de uso\PayPal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DreamMusic.Models.TarjetaDeCredito" Collapsed="true">
+    <Position X="10.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAIAAAAAAAQA=</HashCode>
+      <FileName>Casos de uso\TarjetaDeCredito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DreamMusic.Models.MetodoDePago" Collapsed="true">
+    <Position X="9.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\MetodoDePago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DreamMusic.Models.Disco">
+    <Position X="2.75" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEQBAAABAAAIgAgAAAIAEAAAABAAAAAAIBEAABA=</HashCode>
+      <FileName>Casos de uso\Disco.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Genero" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ItemCompra" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

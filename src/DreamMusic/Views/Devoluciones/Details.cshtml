@@ -1,0 +1,96 @@
+﻿@model DreamMusic.Models.Devolucion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Devolver</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Apellido1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Apellido1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Apellido2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Apellido2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaDevolucion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaDevolucion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecioTotal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecioTotal)
+        </dd>
+
+    </dl>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Titulo
+                </th>
+                <th>
+                    Artista
+                </th>
+                <th>
+                    Precio
+                </th>
+                <th>
+                    Cantidad
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.ItemDevolucions.Count; i++)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.ItemDevolucions.ElementAt<ItemDevolucion>(i).Disco.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.ItemDevolucions.ElementAt<ItemDevolucion>(i).Disco.Artista)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.ItemDevolucions.ElementAt<ItemDevolucion>(i).Disco.PrecioDeDevolucion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.ItemDevolucions.ElementAt<ItemDevolucion>(i).CantidadDevolucion)
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DevolucionId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+

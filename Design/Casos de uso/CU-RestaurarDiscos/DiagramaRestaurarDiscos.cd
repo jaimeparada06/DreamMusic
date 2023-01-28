@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DreamMusic.Models.Administrador">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAgAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Casos de uso\Administrador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Restauraciones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.ApplicationUser">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DreamMusic.Models.Disco">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEQBAAABAAAIgAgAAAIAAAAAABAAAAAAIBEAABA=</HashCode>
+      <FileName>Casos de uso\Disco.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Genero" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ItemRestauracion" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Genero">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAgAAAgAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\Genero.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Discos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.ItemRestauracion">
+    <Position X="0.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAggAgAAAAAACAAAAAAAIEAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\ItemRestauracion.cs</FileName>
+      <NewMemberFileName>Casos de uso\CU-RestaurarDiscos\ItemRestauracion.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Restauracion" />
+      <Property Name="Disco" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Restauracion">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAACAAAAAAAgDAACAAAAAAAAAAAAAEAAAABAAA=</HashCode>
+      <FileName>Casos de uso\Restauracion.cs</FileName>
+      <NewMemberFileName>Casos de uso\CU-RestaurarDiscos\Restauracion.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Administrador" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ItemRestauracion" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Administrador">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAgAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Casos de uso\Administrador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Restauraciones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

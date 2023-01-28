@@ -1,0 +1,108 @@
+﻿@* model storing which data will be rendered by the View *@
+@model DreamMusic.Models.DiscoViewModels.SelectDiscosParaDevolucionViewModel
+@{ ViewData["Titulo"] = "Seleccionar Discos"; }
+
+<h2>Devolver Discos</h2>
+@* Form to fill in the filters to be used *@
+<form asp-controller="Discos" class="form-horizontal">
+    <p>
+        <div>
+            <label asp-for="discoTitulo"></label>
+            <input asp-for="discoTitulo" size="50" />
+            <span asp-validation-for="discoTitulo" class="text-danger"></span>
+
+            <label asp-for="discoGeneroSeleccionado"></label>
+            <select asp-for="discoGeneroSeleccionado" asp-items="Model.Generos">
+                <option value="">All</option>
+            </select>
+
+            <label asp-for="discoArtista"></label>
+            <input asp-for="discoArtista" size="50" />
+
+            <label asp-for="discoAño"></label>
+            <input asp-for="discoAño" size="50" />
+
+            <label asp-for="discoMes"></label>
+            <input asp-for="discoMes" size="50" />
+
+            <label asp-for="discoDia"></label>
+            <input asp-for="discoDia" size="50" />
+
+
+            <input id="filterbyTituloGenero" asp-action="SelectDiscosParaDevolucion" type="submit" value="Filter" formmethod="get" />
+        </div>
+    </p>
+
+    <div id="ModelErrors" asp-validation-summary="All" class="text-danger">@TempData["Error"]</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th width="50%">
+                    Titulo
+                </th>
+                <th>
+                    Artista
+                </th>
+                <th>
+                    Precio devolución
+                </th>
+                <th>
+                    Genero
+                </th>
+
+                <th>
+                    Fecha
+                </th>
+
+                <th align="center" width="10%">
+                    Seleccionar Discos
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Discos.Count() == 0)
+            {
+<tr><td id="NoDiscos" colspan="3">No hay discos disponibles</td></tr> }
+            else
+            {
+
+@foreach (var item in Model.Discos)
+{
+<tr id="Discos_Titulo_@item.Titulo">
+    <td width="50%">
+        @Html.DisplayFor(modelItem => item.Titulo)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Artista)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PrecioDeDevolucion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Genero.Nombre)
+    </td>
+
+    <td>
+        @foreach (var care in item.ItemCompra)
+        {
+
+            @Html.DisplayFor(careItem => care.Comprar.FechaCompra)
+            <body>
+                <p></p>
+            </body>
+
+        }
+    </td>
+                        <td align="center" width="10%">
+                            <input type="checkbox" name="IdsToAdd" id="Disco_@item.DiscoId" value="@item.DiscoId" class="form-control">
+                        </td>
+                    </tr>
+       
+                }
+            }
+        </tbody>
+    </table>
+    <button id="nextButton" asp-action="SelectDiscosParaDevolucion" type="submit" class="btn btn-primary" formmethod="post">Next</button>
+    <a asp-action="Index" class="btn btn-default">Cancel</a>
+</form>

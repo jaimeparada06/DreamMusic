@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DreamMusic.Models.Disco">
+    <Position X="2.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEQBAAABAAAIgAgAAAIAAAAAABAAAAAAIBEAABA=</HashCode>
+      <FileName>Casos de uso\Disco.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Genero" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="DiscosCompradosProveedor" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Genero">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAgAAAgAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\Genero.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Discos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.ItemCompraProveedor">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAgAgAAAAQAAAAAAAAAIAAAAgAAAA=</HashCode>
+      <FileName>Casos de uso\ItemCompraProveedor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Disco" />
+      <Property Name="CompraProveedor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.Proveedor">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Casos de uso\Proveedor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CompraProveedores" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.CompraProveedor">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAIAAAAAgAAgDAACAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Casos de uso\CompraProveedor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Administrador" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ItemCompraProveedor" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DreamMusic.Models.ApplicationUser" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAEgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Casos de uso\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DreamMusic.Models.Administrador">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAgAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Casos de uso\Administrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

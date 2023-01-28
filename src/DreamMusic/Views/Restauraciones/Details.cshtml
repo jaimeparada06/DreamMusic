@@ -1,0 +1,46 @@
+﻿@model DreamMusic.Models.Restauracion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Restauracion</h4>
+    <hr />
+    <dl class="d1-horizontal">
+        <dt >
+            @Html.DisplayNameFor(model => model.PrecioTotal)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.PrecioTotal)
+        </dd>
+        <dt >
+            @Html.DisplayNameFor(model => model.FechaRestauracion)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.FechaRestauracion)
+        </dd>
+        <dt >
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Administrador.Nombre)
+        </dt>
+        <dd >
+            @Html.DisplayFor(model => model.Administrador.Name)
+            @Html.DisplayFor(model => model.Administrador.Apellido1)
+            @Html.DisplayFor(model => model.Administrador.Apellido2)
+
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.RestauracionId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
